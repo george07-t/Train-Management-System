@@ -144,7 +144,7 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Seats: ' || p_seats);
     DBMS_OUTPUT.PUT_LINE('Destination: ' || p_destination);
     DBMS_OUTPUT.PUT_LINE('Source: ' || p_source);
-    DBMS_OUTPUT.PUT_LINE('Average Time: ' || p_av_time);
+    DBMS_OUTPUT.PUT_LINE('Arival Time: ' || p_av_time);
 EXCEPTION
     WHEN NO_DATA_FOUND THEN
         DBMS_OUTPUT.PUT_LINE('No train found with ID: ' || p_train_id);
@@ -199,3 +199,26 @@ BEGIN
   DBMS_OUTPUT.PUT_LINE(value);
 END;
 /
+  
+SET SERVEROUTPUT ON;
+CREATE OR REPLACE TRIGGER update_tickets_train_id
+AFTER UPDATE OF train_id ON train
+FOR EACH ROW
+BEGIN
+  UPDATE tickets
+  SET train_num = :NEW.train_id
+  WHERE train_num = :OLD.train_id;
+END;
+/
+UPDATE train
+SET train_id = 007
+WHERE train_id = 07;
+
+SET SERVEROUTPUT ON;
+CREATE TRIGGER delete_user_trigger
+AFTER DELETE ON users
+FOR EACH ROW
+BEGIN
+    DELETE FROM tickets WHERE NID = OLD.NID;
+END;
+

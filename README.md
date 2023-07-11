@@ -1,6 +1,10 @@
-# Train-Management-System
-Train Management System Database Project
+# database-project-george07-t
+database-project-george07-t created by GitHub Classroom
 
+Roll:1907114
+
+Train Management System
+-------------------------
 The Train Management System Database is a project aimed at managing and organizing train-related information within a railway system. It provides a structured and efficient way to store, retrieve, and manage data related to users, trains, classes, routes, tickets, and payments. The database enables seamless management of train operations, ticket booking, passenger information, and financial transactions.
 
 The project consists of several tables that are designed to capture specific aspects of the train management system. Here's an overview of the tables and their purpose:
@@ -16,6 +20,29 @@ The project consists of several tables that are designed to capture specific asp
     Tickets: This table manages ticket information, such as ticket number, train number, journey date, passenger name, class, source, destination, seat number, and user's NID. The ticket number is the primary key, and foreign keys are used to establish relationships with the Users and Train tables.
 
     Payment: The Payment table tracks payment details for tickets. It includes ticket number, card number, bank, amount, and transaction ID. The transaction ID serves as the primary key, and a foreign key references the Tickets table.
+Users  Table
+-----
+![Screenshot (539)](https://github.com/DatabaseSystem19/database-project-george07-t/assets/68592871/7a3f9dfe-c53b-4245-8088-acd93bbecb92)
+
+Train  Table
+-----
+![Screenshot (540)](https://github.com/DatabaseSystem19/database-project-george07-t/assets/68592871/669e3d77-0d0d-4fdd-ac2e-0565e7f2b885)
+
+Class  Table
+-----
+![Screenshot (541)](https://github.com/DatabaseSystem19/database-project-george07-t/assets/68592871/d2f03960-df58-4a76-917a-e3c8bb664f63)
+
+Route  Table
+-----
+![Screenshot (542)](https://github.com/DatabaseSystem19/database-project-george07-t/assets/68592871/fae4875b-976c-4767-96ca-b48af80d829d)
+
+Tickets  Table
+-----
+![Screenshot (543)](https://github.com/DatabaseSystem19/database-project-george07-t/assets/68592871/cb93dd76-6d7e-420c-812e-0fea8970b380)
+
+Payment  Table
+-----
+![Screenshot (544)](https://github.com/DatabaseSystem19/database-project-george07-t/assets/68592871/fa2ce096-68a3-4155-b061-ece102cc6a72)
 
 The Train Management System Database project facilitates various operations, such as:
 
